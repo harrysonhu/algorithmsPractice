@@ -1,9 +1,9 @@
 const coinChange = function(coins, amount) {
-	const min = Number.MIN_SAFE_INTEGER;
+	const max = Number.MAX_SAFE_INTEGER;
 	if (coins == null || amount < 0) {
 		return -1;
 	}
-	const dp = new Array(amount + 1).fill(min);
+	const dp = new Array(amount + 1).fill(max);
 	dp[0] = 0;
 	for (let coin of coins) {
 		for (let i = coin; i <= amount; i++) {
@@ -11,11 +11,11 @@ const coinChange = function(coins, amount) {
 		}
 	}
 
-	return dp[amount] == min ? -1 : dp[amount];
+	return dp[amount] == max ? -1 : dp[amount];
 
 }
 
-const test1 = coinChange([1, 2, 3], 11);
+const test1 = coinChange([1, 2, 5], 11);
 console.log(test1); // Expect 3
 
 const test2 = coinChange([], 3);
