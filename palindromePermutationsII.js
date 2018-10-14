@@ -1,4 +1,4 @@
-var palindromePermutationII = function(s) {
+const palindromePermutationII = function(s) {
 	const result = [];
 
 	let map = {};
@@ -37,7 +37,7 @@ var palindromePermutationII = function(s) {
 	return result;
 } 
 
-var generatePermutations = function(result, chars, mid, curr, used) {
+const generatePermutations = function(result, chars, mid, curr, used) {
 	if (curr.length == chars.length) {
 		const reversedString = curr.split('').reverse().join('');
 		result.push(curr + mid + reversedString);
