@@ -14,7 +14,7 @@ const topKFrequent = (nums, k) => {
 	for (let i = buckets.length - 1; i >= 0; i--) {
 		for (let j = 0; j < buckets[i].length; j++) {
 			result.push(buckets[i][j]);
-			if (result == k) {
+			if (result.length == k) {
 				return result;
 			}
 		}
