@@ -1,15 +1,5 @@
 const palindromePermutation = function(s) {
-	const map = {};
-	const chars = s.split('');
-	for (let i = 0; i < chars.length; i++) {
-		if (map[chars[i]] == null) {
-			map[chars[i]] = 1;
-		} else {
-			delete map[chars[i]];
-		}
-	}
-	const result = Object.keys(map).length <= 1;
-	return result;
+	
 }
 
 let test1 = palindromePermutation('nnaahh'); // true
