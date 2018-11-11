@@ -8,7 +8,7 @@ const longestSubstringNoRepeat = s => {
 			start++;
 			window = s.substring(start, i);
 		}
-    window = s.substring(start, i + 1);
+    	window = s.substring(start, i + 1);
 		max = Math.max(max, window.length);
 	}
 	return max;
